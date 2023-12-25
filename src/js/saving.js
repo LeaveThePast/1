@@ -11,7 +11,7 @@ class GameSaving {
 
 export default class GameSavingLoader {
   static load() {
-    return read()
+    read()
     .then((data) => {
       return json(data)
     })
