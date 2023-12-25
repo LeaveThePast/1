@@ -21,10 +21,10 @@ export default class GameSavingLoader {
   }
 }
 
-// GameSavingLoader.load().then((saving) => {
-//   console.log(saving)
-// }, (error) => {
-//   console.error("Произошла ошибка:", error)
-// });
+GameSavingLoader.load().then((saving) => {
+  console.log(saving)
+}, (error) => {
+  console.error("Произошла ошибка:", error)
+});
 
 export { GameSaving, GameSavingLoader }
