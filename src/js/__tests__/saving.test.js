@@ -7,14 +7,8 @@ describe('GameSavingLoader', () => {
   });
 
   it('should have correct properties in GameSaving object', async () => {
+    const correctSaving = {"id":9,"created":1546300800,"userInfo":{"id":1,"name":"Hitman","level":10,"points":2000}}
     const saving = await GameSavingLoader.load();
-    expect(saving.id).toEqual(9);
-    expect(saving.created).toEqual(1546300800);
-    expect(saving.userInfo).toEqual({
-      id: 1,
-      name: 'Hitman',
-      level: 10,
-      points: 2000
-    });
+    expect(saving).toEqual(correctSaving);
   });
 });

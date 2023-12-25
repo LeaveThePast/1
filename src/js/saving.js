@@ -11,20 +11,22 @@ class GameSaving {
 
 export default class GameSavingLoader {
   static load() {
-    read()
-    .then((data) => {
-      return json(data)
-    })
-    .then((parsedData) => {
-      return new GameSaving(JSON.parse(parsedData))
-    })
+    return read()
+      .then((data) => {
+        return json(data);
+      })
+      .then((parsedData) => {
+        console.log(JSON.parse(parsedData));
+        return new GameSaving(JSON.parse(parsedData));
+      });
   }
 }
 
-GameSavingLoader.load().then((saving) => {
-  console.log(saving)
-}, (error) => {
-  console.error("Произошла ошибка:", error)
-});
+
+// GameSavingLoader.load().then((saving) => {
+//   console.log(saving)
+// }, (error) => {
+//   console.error("Произошла ошибка:", error)
+// });
 
 export { GameSaving, GameSavingLoader }
