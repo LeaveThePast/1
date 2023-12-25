@@ -10,8 +10,8 @@ class GameSaving {
 }
 
 export default class GameSavingLoader {
-  static load() {
-    return read()
+  static load(data) {
+    return read(data)
       .then((data) => {
         return json(data);
       })
@@ -22,8 +22,8 @@ export default class GameSavingLoader {
   }
 }
 
-
-// GameSavingLoader.load().then((saving) => {
+// const data = '{"id":9,"created":1546300800,"userInfo":{"id":1,"name":"Hitman","level":10,"points":2000}}';
+// GameSavingLoader.load(data).then((saving) => {
 //   console.log(saving)
 // }, (error) => {
 //   console.error("Произошла ошибка:", error)
